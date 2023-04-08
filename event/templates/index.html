@@ -1,0 +1,436 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+	================================================== -->
+  <meta charset="utf-8">
+  <title>Circular Management</title>
+     <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+
+  <!-- Mobile Specific Metas
+	================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Construction Html5 Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Themefisher">
+  <meta name="generator" content="Themefisher Educenter HTML Template v1.0">
+
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css'%}" type="text/css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="{% static 'plugins/slick/slick.css'%}" type="text/css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="{% static 'plugins/themify-icons/themify-icons.css'%}" type="text/css">
+  <!-- animation css -->
+  <link rel="stylesheet" href="{% static 'plugins/animate/animate.css'%}" type="text/css">
+  <!-- aos -->
+  <link rel="stylesheet" href="{% static 'plugins/aos/aos.css'%}" type="text/css">
+  <!-- venobox popup -->
+  <link rel="stylesheet" href="{% static 'plugins/venobox/venobox.css'%}" type="text/css">
+
+  <!-- Main Stylesheet -->
+  <link href="{% static 'css/style.css" rel="stylesheet'%}" type="text/css">
+  <!--Favicon-->
+  <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+  <link rel="icon" href="{% static 'images/favicon.ico'%}" type="image/x-icon">
+
+</head>
+
+<body>
+  <!-- preloader start -->
+  <div class="preloader">
+    <img src="{% static 'images/preloader.gif'%}" alt="preloader">
+  </div>
+  <!-- preloader end -->
+
+<!-- header -->
+<header class="fixed-top header">
+  <!-- top header -->
+  <div class="top-header py-2 bg-white">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-lg-4 text-center text-lg-left">
+          <a class="text-color mr-3" href="tel:+443003030266"><strong>CALL</strong> 0422 263 5600</a>
+          <ul class="list-inline d-inline">
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://www.facebook.com/KPRIETonline"><i class="ti-facebook"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://twitter.com/kprietonline"><i class="ti-twitter-alt"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://www.linkedin.com/school/kprietonline/mycompany/"><i class="ti-linkedin"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://www.instagram.com/kprietonline/"><i class="ti-instagram"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-8 text-center text-lg-right">
+          <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="home">Home</a></li>
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="event">Events</a></li>
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="circular">Circulars</a></li>
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="club">Clubs</a></li>
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="editprofile">My Profile</a></li>
+            {% if user.is_authenticated %}
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"  href="logout">logout|{{ user.first_name }}</a></li>
+            {% else %}
+            <p>You are not logged in</p>   
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"href="{% url 'login' %}">Log In</href>
+           {% endif %} 
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- navbar -->
+ 
+          
+
+</header>
+</div>
+<!-- /header -->
+<!-- Modal -->
+
+<!-- Modal -->
+
+
+<!-- hero slider -->
+
+      <!-- slider item -->
+     
+<!-- /hero slider -->
+
+<!-- banner-feature -->
+<br/>
+<br/>
+<br/>
+<section class="bg-gray overflow-md-hidden">
+  <div class="container-fluid p-0">
+    <div class="row no-gutters">
+      <div class="col-xl-4 col-lg-5 align-self-center">
+        <img class="img-fluid w-80" src="{% static 'images/beyond.jpeg'%}" alt="banner-feature">
+      </div>
+      <div class="col-xl-8 col-lg-7">
+        <div class="row feature-blocks bg-gray justify-content-between">
+          <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+            <i class="ti-book mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+            <h3 class="mb-xl-4 mb-lg-3 mb-4">Events</h3>
+            <p>The events that is arranged by clubs. To show case your talent to everyone.
+            The place where you can witness the fun struggle and also many other hidden talents</p>
+          </div>
+          <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+            <i class="ti-blackboard mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+            <h3 class="mb-xl-4 mb-lg-3 mb-4">Circulars</h3>
+            <p>The information from the management and department that the students should know</p>
+          </div>
+          <div class="col-sm-6 col-xl-5 mb-xl-5 mb-lg-3 mb-4 text-center text-sm-left">
+            <i class="ti-agenda mb-xl-4 mb-lg-3 mb-4 feature-icon"></i>
+            <h3 class="mb-xl-4 mb-lg-3 mb-4">Clubs</h3>
+            <p>In our college there are cultural house <strong>SANGAMAM </strong>and <strong>IGNITRRON</strong> these two cultural house haveany clubs .</p>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /banner-feature -->
+
+
+<!-- courses -->
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex align-items-center section-title justify-content-between">
+          <h2 class="mb-0 text-nowrap mr-3">Events</h2>
+          <div class="border-top w-100 border-primary d-none d-sm-block"></div>
+          <div>
+            <a href="event" class="btn btn-sm btn-outline-primary ml-sm-3 d-none d-sm-block">see all</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- course list -->
+<div class="row justify-content-center">
+  <!-- course item -->
+  {%for data in dataset%}
+  <div class="col-lg-4 col-sm-6 mb-5">
+    <div class="card p-0 border-primary rounded-0 hover-shadow">
+     {%if data.profile_photo %}
+      <img class="card-img-top rounded-0" src={{data.profile_photo.url}} style="width: 288px;height: 248px;" >
+       {% else %}
+        <img class="card-img-top rounded-0" src="{% static 'images/avatar.png'%}" style="width: 288px;height: 248px;">
+      {%endif %}
+      <div class="card-body">
+        <ul class="list-inline mb-2">
+          <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>{{ data.post_date }}</li>
+      
+        </ul>
+        <a href="course-single.html">
+          <h4 class="card-title"><a href="{% url 'event_detail' data.id %}"</a>{{ data.event_name }}</a></h4>
+        </a>
+        <p class="card-text mb-4">{{ data.description }} </p>
+        <a href="{% url 'event_detail' data.id %}" class="btn btn-primary btn-sm">View More</a>
+      </div>
+    </div>
+  </div>
+  {%endfor%}
+  <!-- course item -->
+  
+
+<!-- /course list -->
+    <!-- mobile see all button -->
+    <div class="row">
+      <div class="col-12 text-center">
+        <a href="courses.html" class="btn btn-sm btn-outline-primary d-sm-none d-inline-block">see all</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /courses -->
+
+<!-- cta -->
+
+<!-- /cta -->
+
+<!-- success story -->
+<section class="section bg-cover" data-background="{% static 'images/backgrounds/clg.jpg'%}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-sm-4 position-relative success-video">
+        <a class="play-btn venobox" href="https://youtu.be/nA1Aqp0sPQo" data-vbtype="video">
+          <i class="ti-control-play"></i>
+        </a>
+      </div>
+      <div class="col-lg-6 col-sm-8">
+        <div class="bg-white p-5">
+          <h2 class="section-title">About College</h2>
+          <p>KPR Institute of Engineering and Technology is an autonomous engineering college established in the year 2009 , Coimbatore, Tamil Nadu. KPRIET is approved by AICTE, New Delhi and affiliated to Anna University, Chennai. Institution is accredited by NAAC with "A" grade and courses are approved by National Board of Accreditation (NBA). Courses were offered under Bachelor's & Master's Degree as well. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /success story -->
+
+<!-- events -->
+<section class="section bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex align-items-center section-title justify-content-between">
+          <h2 class="mb-0 text-nowrap mr-3">Circulars</h2>
+          <div class="border-top w-100 border-primary d-none d-sm-block"></div>
+          <div>
+            <a href="circular" class="btn btn-sm btn-outline-primary ml-sm-3 d-none d-sm-block">see all</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+  <!-- event -->
+  {%for circulars in circular%}
+  <div class="col-lg-4 col-sm-6 mb-5">
+    <div class="card p-0 border-primary rounded-0 hover-shadow">
+     {%if circulars.profile_photo %}
+      <img class="card-img-top rounded-0" src={{circulars.profile_photo.url}} style="width: 288px;height: 248px;" >
+       {% else %}
+        <img class="card-img-top rounded-0" src="{% static 'images/avatar.png'%}" style="width: 288px;height: 248px;">
+      {%endif %}
+      <div class="card-body">
+        <ul class="list-inline mb-2">
+        {% for department in circulars.department.all %}<br/>
+          <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>{{ department }}</li>
+          {% endfor %}
+        </ul>
+        <a href="course-single.html">
+          <h4 class="card-title"><a href="{% url 'circular_detail' circulars.id %}"</a>{{ circulars.title }}</a></h4>
+        </a>
+        <p class="card-text mb-4">{{ circulars.description }} </p>
+        <a href="{% url 'circular_detail' circulars.id %}" class="btn btn-primary btn-sm">View More</a>
+      </div>
+    </div>
+  </div>
+  {%endfor%}
+  
+    <!-- mobile see all button -->
+    <div class="row">
+      <div class="col-12 text-center">
+        <a href="circular.html" class="btn btn-sm btn-outline-primary d-sm-none d-inline-block">see all</a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /events -->
+
+
+<!-- /teachers -->
+
+<!-- blog -->
+<!-- Club -->
+<section class="section bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex align-items-center section-title justify-content-between">
+          <h2 class="mb-0 text-nowrap mr-3">Club</h2>
+          <div class="border-top w-100 border-primary d-none d-sm-block"></div>
+          <div>
+            <a href="club" class="btn btn-sm btn-outline-primary ml-sm-3 d-none d-sm-block">see all</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+  <!-- club-->
+  {%for clubs in club%}
+  <div class="col-lg-4 col-sm-6 mb-5">
+    <div class="card p-0 border-primary rounded-0 hover-shadow">
+     {%if clubs.profile_photo %}
+      <img class="card-img-top rounded-0" src={{clubs.profile_photo.url}} style="width: 288px;height: 248px;" >
+       {% else %}
+        <img class="card-img-top rounded-0" src="{% static 'images/avatar.png'%}" style="width: 288px;height: 248px;">
+      {%endif %}
+      <div class="card-body">
+        <ul class="list-inline mb-2">
+          <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>{{ clubs.club_id }}</li>
+      
+        </ul>
+        <a href="course-single.html">
+          <h4 class="card-title"><a href="{% url 'club_detail' clubs.id %}"</a>{{ clubs.club_name }}</a></h4>
+        </a>
+        <p class="card-text mb-4">{{ clubs.incharge }} </p>
+        <a href="{% url 'club_detail' clubs.id %}" class="btn btn-primary btn-sm">View More</a>
+      </div>
+    </div>
+  </div>
+  {%endfor%}
+  
+    <!-- mobile see all button -->
+    <div class="row">
+      <div class="col-12 text-center">
+        <a href="club" class="btn btn-sm btn-outline-primary d-sm-none d-inline-block">see all</a>
+      </div>
+    </div>
+  </div>
+</section>
+  <!-- newsletter -->
+  <div class="newsletter">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9 ml-auto bg-primary py-5 newsletter-block">
+          <h3 class="text-white">Subscribe Now</h3>
+          <form action="#">
+            <div class="input-wrapper">
+              <input type="email" class="form-control border-0" id="newsletter" name="newsletter" placeholder="Enter Your Email...">
+              <button type="submit" value="send" class="btn btn-primary">Join</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- footer content -->
+  <div class="footer bg-footer section border-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
+          <!-- logo -->
+          <a class="logo-footer" href="{% url 'home' %}"><img class="img-fluid mb-4" src="{% static 'images/logo.jpeg'%}" alt="logo"></a>
+          <ul class="list-unstyled">
+            <li class="mb-2">Address: Avinashi - Coimbatore Rd, Arasur, Tamil Nadu 641048</li>
+            <li class="mb-2">0422 263 5600</li>
+            <li class="mb-2">contact@<a href="https://www.kpriet.ac.in/">KPR Institute of Engineering and Technologies</a></li>
+          </ul>
+        </div>
+        <!-- company -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5">COMPANY</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="#">About Us</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Our Teacher</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Contact</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Blog</a></li>
+          </ul>
+        </div>
+        <!-- links -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5">LINKS</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="#">Courses</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Events</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Notice</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Scholarship</a></li>
+          </ul>
+        </div>
+        <!-- support -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5">SUPPORT</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="#">Forums</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Documentation</a></li>
+            <li class="mb-3"><a class="text-color" href="#!">Language</a></li>
+            <li class="mb-3"><a class="text-color" href="#!">Release Status</a></li>
+          </ul>
+        </div>
+        <!-- support -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5">RECOMMEND</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="https://www.facebook.com/KPRIETonline">facebook</a></li>
+            <li class="mb-3"><a class="text-color" href="https://www.instagram.com/kprietonline/">Instagram</a></li>
+            <li class="mb-3"><a class="text-color" href="https://www.linkedin.com/school/kprietonline/mycompany/">Linked-in</a></li>
+            <li class="mb-3"><a class="text-color" href="https://twitter.com/kprietonline">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- copyright -->
+  <div class="copyright py-4 bg-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7 text-sm-left text-center">
+          <p class="mb-0">Copyright &copy;
+            <script>
+              var CurrentYear = new Date().getFullYear()
+              document.write(CurrentYear)
+            </script> 
+            , designed & developed by <a href="#" class="text-muted">Hema</a>
+          </p>
+        </div>
+        <div class="col-sm-5 text-sm-right text-center">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://www.facebook.com/KPRIETonline"><i class="ti-facebook text-primary"></i></a></li>
+            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://twitter.com/kprietonline"><i class="ti-twitter-alt text-primary"></i></a></li>
+            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://www.linkedin.com/school/kprietonline/mycompany/"><i class="ti-linkedin text-primary"></i></a></li>
+            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://www.instagram.com/kprietonline/"><i class="ti-instagram text-primary"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- /footer -->
+
+<!-- jQuery -->
+<script src="{% static 'plugins/jQuery/jquery.min.js'%}"></script>
+<!-- Bootstrap JS -->
+<script src="{% static 'plugins/bootstrap/bootstrap.min.js'%}"></script>
+<!-- slick slider -->
+<script src="{% static 'plugins/slick/slick.min.js'%}"></script>
+<!-- aos -->
+<script src="{% static 'plugins/aos/aos.js'%}"></script>
+<!-- venobox popup -->
+<script src="{% static 'plugins/venobox/venobox.min.js'%}"></script>
+<!-- filter -->
+<script src="{% static 'plugins/filterizr/jquery.filterizr.min.js'%}"></script>
+<!-- google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"></script>
+<script src="{% static 'plugins/google-map/gmap.js'%}"></script>
+
+<!-- Main Script -->
+<script src="{% static 'js/script.js'%}"></script>
+
+</body>
+</html>

@@ -1,0 +1,204 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+	================================================== -->
+  <meta charset="utf-8">
+  <title>Circular Management</title>
+     <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/favicon.ico' %}">
+
+  <!-- Mobile Specific Metas
+	================================================== -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Construction Html5 Template">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta name="author" content="Themefisher">
+  <meta name="generator" content="Themefisher Educenter HTML Template v1.0">
+
+  <!-- ** Plugins Needed for the Project ** -->
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="{% static 'plugins/bootstrap/bootstrap.min.css'%}" type="text/css">
+  <!-- slick slider -->
+  <link rel="stylesheet" href="{% static 'plugins/slick/slick.css'%}" type="text/css">
+  <!-- themefy-icon -->
+  <link rel="stylesheet" href="{% static 'plugins/themify-icons/themify-icons.css'%}" type="text/css">
+  <!-- animation css -->
+  <link rel="stylesheet" href="{% static 'plugins/animate/animate.css'%}" type="text/css">
+  <!-- aos -->
+  <link rel="stylesheet" href="{% static 'plugins/aos/aos.css'%}" type="text/css">
+  <!-- venobox popup -->
+  <link rel="stylesheet" href="{% static 'plugins/venobox/venobox.css'%}" type="text/css">
+
+  <!-- Main Stylesheet -->
+  <link href="{% static 'css/style.css" rel="stylesheet'%}" type="text/css">
+  <!--Favicon-->
+  <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+  <link rel="icon" href="{% static 'images/favicon.ico'%}" type="image/x-icon">
+
+</head>
+
+<body>
+  <!-- preloader start -->
+  <div class="preloader">
+    <img src="{% static 'images/preloader.gif'%}" alt="preloader">
+  </div>
+  <!-- preloader end -->
+
+<!-- header -->
+<header class="fixed-top header">
+  <!-- top header -->
+  <div class="top-header py-2 bg-white">
+    <div class="container">
+      <div class="row no-gutters">
+        <div class="col-lg-4 text-center text-lg-left">
+          <a class="text-color mr-3" href="tel:+443003030266"><strong>CALL</strong> 0422 263 5600</a>
+          <ul class="list-inline d-inline">
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://www.facebook.com/KPRIETonline"><i class="ti-facebook"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://twitter.com/kprietonline"><i class="ti-twitter-alt"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://www.linkedin.com/school/kprietonline/mycompany/"><i class="ti-linkedin"></i></a></li>
+            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="https://www.instagram.com/kprietonline/"><i class="ti-instagram"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-8 text-center text-lg-right">
+          <ul class="list-inline">
+          <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{% url 'home' %}">Home</a></li>
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{% url 'event' %}">Events</a></li>
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{% url 'circular' %}">Circulars</a></li>
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{% url 'club' %}">Clubs</a></li>
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="{% url 'editprofile' %}">My Profile</a></li>
+            {% if user.is_authenticated %}
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"  href="logout">logout|{{ user.first_name }}</a></li>
+            {% else %}
+            <p>You are not logged in</p>   
+            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block"href="{% url 'login' %}">Log In</href>
+           {% endif %} 
+          </ul>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- navbar -->
+ 
+          
+
+</header>
+</div>
+<!-- /header -->
+ <br/>
+         <br/> <br/>
+{% block content %}
+      
+        
+
+	{% endblock %}
+					
+
+
+<!-- footer content -->
+  <div class="footer bg-footer section border-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-sm-8 mb-5 mb-lg-0">
+          <!-- logo -->
+          <a class="logo-footer" href="{% url 'home' %}"><img class="img-fluid mb-4" src="{% static 'images/logo.jpeg'%}" alt="logo"></a>
+          <ul class="list-unstyled">
+            <li class="mb-2">Address: Avinashi - Coimbatore Rd, Arasur, Tamil Nadu 641048</li>
+            <li class="mb-2">0422 263 5600</li>
+             <li class="mb-2">contact@<a href="https://www.kpriet.ac.in/">KPR Institute of Engineering and Technologies</a></li>
+          </ul>
+        </div>
+        <!-- company -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5">COMPANY</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="#">About Us</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Our Teacher</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Contact</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Blog</a></li>
+          </ul>
+        </div>
+        <!-- links -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5">LINKS</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="#">Courses</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Events</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Notice</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Scholarship</a></li>
+          </ul>
+        </div>
+        <!-- support -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5">SUPPORT</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="#">Forums</a></li>
+            <li class="mb-3"><a class="text-color" href="#">Documentation</a></li>
+            <li class="mb-3"><a class="text-color" href="#!">Language</a></li>
+            <li class="mb-3"><a class="text-color" href="#!">Release Status</a></li>
+          </ul>
+        </div>
+        <!-- support -->
+        <div class="col-lg-2 col-md-3 col-sm-4 col-6 mb-5 mb-md-0">
+          <h4 class="text-white mb-5">RECOMMEND</h4>
+          <ul class="list-unstyled">
+            <li class="mb-3"><a class="text-color" href="https://www.facebook.com/KPRIETonline">facebook</a></li>
+            <li class="mb-3"><a class="text-color" href="https://www.instagram.com/kprietonline/">Instagram</a></li>
+            <li class="mb-3"><a class="text-color" href="https://www.linkedin.com/school/kprietonline/mycompany/">Linked-in</a></li>
+            <li class="mb-3"><a class="text-color" href="https://twitter.com/kprietonline">Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- copyright -->
+  <div class="copyright py-4 bg-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7 text-sm-left text-center">
+          <p class="mb-0">Copyright &copy;
+            <script>
+              var CurrentYear = new Date().getFullYear()
+              document.write(CurrentYear)
+            </script> 
+            , designed & developed by <a href="#" class="text-muted">Hema</a>
+          </p>
+        </div>
+        <div class="col-sm-5 text-sm-right text-center">
+          <ul class="list-inline">
+            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://www.facebook.com/KPRIETonline"><i class="ti-facebook text-primary"></i></a></li>
+            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://twitter.com/kprietonline"><i class="ti-twitter-alt text-primary"></i></a></li>
+            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://www.linkedin.com/school/kprietonline/mycompany/"><i class="ti-linkedin text-primary"></i></a></li>
+            <li class="list-inline-item"><a class="d-inline-block p-2" href="https://www.instagram.com/kprietonline/"><i class="ti-instagram text-primary"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- /footer -->
+
+<!-- jQuery -->
+<script src="{% static 'plugins/jQuery/jquery.min.js'%}"></script>
+<!-- Bootstrap JS -->
+<script src="{% static 'plugins/bootstrap/bootstrap.min.js'%}"></script>
+<!-- slick slider -->
+<script src="{% static 'plugins/slick/slick.min.js'%}"></script>
+<!-- aos -->
+<script src="{% static 'plugins/aos/aos.js'%}"></script>
+<!-- venobox popup -->
+<script src="{% static 'plugins/venobox/venobox.min.js'%}"></script>
+<!-- filter -->
+<script src="{% static 'plugins/filterizr/jquery.filterizr.min.js'%}"></script>
+<!-- google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCcABaamniA6OL5YvYSpB3pFMNrXwXnLwU"></script>
+<script src="{% static 'plugins/google-map/gmap.js'%}"></script>
+
+<!-- Main Script -->
+<script src="{% static 'js/script.js'%}"></script>
+
+</body>
+</html>

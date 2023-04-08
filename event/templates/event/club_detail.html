@@ -1,0 +1,32 @@
+{%extends "base.html"%}
+ {%load static%}
+ <!DOCTYPE html>    
+<html lang="en">    
+<head>    
+  <title>Circular</title>    
+  
+{% block content %}
+<div class="container">  
+ <div class="media">    
+ <div class="media-body">
+  <a data-bs-toggle="modal" data-bs-target="#genderModal">
+      {%if object.profile_photo %}
+        <img src="{{object.profile_photo.url}}" class="img-fluid" style="width:288px;height:248px;">
+      {% else %}
+        <img src="{% static 'images/avatar.png' %}" class="img-fluid" style="width: 288px;height: 248px;">
+      {%endif %}
+    </a>
+     <h4 class="media-heading"> {{object.club_name}}</h4>     
+    Club Name :{{object.club_name}}<br/>
+    Club Id    :{{object.club_id}}<br/>
+    Incharge   :{{object.incharge}}<br/>  
+    Description   :{{object.description}}<br/>   
+    <br/>
+
+<br/>
+</div>
+
+  </div>
+</div>
+<hr>
+	{% endblock %}

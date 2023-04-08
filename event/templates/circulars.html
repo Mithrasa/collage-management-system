@@ -1,0 +1,48 @@
+{%extends "base.html"%}
+{% load static %}
+<!DOCTYPE html>    
+<html lang="en">    
+<head>    
+  <title>Circular</title>    
+ {% block content %}
+    <section class="section bg-gray">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex align-items-center section-title justify-content-between">
+          <h2 class="mb-0 text-nowrap mr-3">Circulars</h2>
+          <div class="border-top w-100 border-primary d-none d-sm-block"></div>
+          
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+  <!-- event -->
+  {%for circulars in circular%}
+  <div class="col-lg-4 col-sm-6 mb-5">
+    <div class="card p-0 border-primary rounded-0 hover-shadow">
+     {%if circulars.profile_photo %}
+      <img class="card-img-top rounded-0" src={{circulars.profile_photo.url}} style="width: 288px;height: 248px;" >
+       {% else %}
+        <img class="card-img-top rounded-0" src="{% static 'images/avatar.png'%}" style="width: 288px;height: 248px;">
+      {%endif %}
+      <div class="card-body">
+        <ul class="list-inline mb-2">
+      {% for department in circulars.department.all %}<br/>
+          <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>{{ department }}</li>
+        {% endfor %}
+        </ul>
+        <a href="course-single.html">
+          <h4 class="card-title"><a href="{% url 'circular_detail' circulars.id %}"</a>{{ circulars.title }}</a></h4>
+        </a>
+        <p class="card-text mb-4">{{ circulars.description }} </p>
+        <a href="{% url 'circular_detail' circulars.id %}" class="btn btn-primary btn-sm">View More</a>
+      </div>
+    </div>
+  </div>
+  {%endfor%}
+    </div>
+  </div>
+  </section>
+  <hr>
+{% endblock %}

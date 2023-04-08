@@ -1,0 +1,48 @@
+{%extends "base.html"%}
+{% load static %}
+<!DOCTYPE html>    
+<html lang="en">    
+<head>    
+  <title>Events</title>    
+  {% block content %}
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex align-items-center section-title justify-content-between">
+          <h2 class="mb-0 text-nowrap mr-3">Events</h2>
+          <div class="border-top w-100 border-primary d-none d-sm-block"></div>
+          
+        </div>
+      </div>
+    </div>
+    <!-- course list -->
+<div class="row justify-content-center">
+  <!-- course item -->
+  {%for data in dataset%}
+  <div class="col-lg-4 col-sm-6 mb-5">
+    <div class="card p-0 border-primary rounded-0 hover-shadow">
+     {%if data.profile_photo %}
+      <img class="card-img-top rounded-0" src={{data.profile_photo.url}} style="width: 288px;height: 248px;" >
+       {% else %}
+        <img class="card-img-top rounded-0" src="{% static 'images/avatar.png'%}" style="width: 288px;height: 248px;">
+      {%endif %}
+      <div class="card-body">
+        <ul class="list-inline mb-2">
+          <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>{{ data.post_date }}</li>
+      
+        </ul>
+        <a href="course-single.html">
+          <h4 class="card-title"><a href="{% url 'event_detail' data.id %}"</a>{{ data.event_name }}</a></h4>
+        </a>
+        <p class="card-text mb-4">{{ data.description }} </p>
+        <a href="{% url 'event_detail' data.id %}" class="btn btn-primary btn-sm">View More</a>
+      </div>
+    </div>
+  </div>
+  
+  {%endfor%}
+  </section>
+  <hr>
+{% endblock %}
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>SignUp</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+</head>
+<body>
+
+{% block content %}
+  <h2>Sign up</h2>
+  <form method="post">
+    {% csrf_token %}
+      {% for field in form %}
+      <p>
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+      {% endfor %}
+    <button type="submit"class="btn btn-primary">Sign up</button>
+    <a href="/login/">Login</a>
+  </form>
+{% endblock %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>  
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>    
+</body>
+</html>

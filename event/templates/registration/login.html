@@ -1,0 +1,69 @@
+<html lang="pt-br">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="login">
+            <div class="row">
+              <h2>Log In</h2>
+                <div class="col-md-12">
+
+<form method="post">
+  <div class="container py-5">
+  <style>
+    body {
+      background-color: #eee!important;
+  }
+  
+  .login {
+      background-color: #fff;
+      width: 40%;
+      margin: 80px auto;
+      border-radius: 10px;
+      padding: 20px;
+      border-left: 5px solid #879600;
+      box-shadow: 0px 0px 0px 0px #3f51b5;
+  }
+  
+  .login>.row>h2 {
+      margin: auto;
+  }
+  
+  .btn-form {
+      width: 100%;
+      margin-top: 20px;
+  }
+</style> 
+ {% csrf_token %}
+            {% if form.errors %}  
+                <p class=" font-weight-bold text-danger" >Incorrect username or password</p>
+            {% endif %}
+            <form  method="post" class="signin-form " >     
+            
+                {% for field in form %}
+                    <div class="form-group mb-2">
+                        {{ field.label }}
+                        {{ field }}
+                    </div>									
+                {% endfor %} 
+  <button type="submit">Log In</button>
+  <p class="text-center">Don't have an account? <a href="/">Create an account</a>.</p>
+</form>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
